@@ -6,22 +6,25 @@ Pages Principales
 1. Page d’Accueil
 Découvrez notre gamme de téléphones mobiles avec une présentation visuelle attrayante et des descriptions détaillées.
 
-!Page d’Accueil
+
+![Accueil](images/accueil.png)
 
 2. Page d’Inscription
 Un formulaire d’inscription simple et sécurisé pour permettre aux utilisateurs de créer un compte.
 
 !Page d’Inscription
+![Inscription](images/inscription.png)
 
 3. Page de Contact
 Un formulaire de contact pour que les utilisateurs puissent nous envoyer des messages et obtenir des informations supplémentaires.
 
-!Page de Contact
+
+![Contact](images/contact.png)
 
 4. Page d’Animation
 Des animations interactives pour rendre le site plus dynamique et engageant.
 
-!Page d’Animation
+![Animation](images/animation.png)
 
 Technologies Utilisées
 HTML5
