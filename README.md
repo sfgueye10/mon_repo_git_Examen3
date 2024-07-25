@@ -28,7 +28,7 @@ HTML5
 CSS3
 JavaScript
 Instructions d’Installation
-Clonez le dépôt : git clone https://github.com/votre-utilisateur/votre-repo.git
+Clonez le dépôt : git clone https://github.com/sfgueye10/mon_repo_git_Examen3.git
 Ouvrez le fichier index.html dans votre navigateur.
 Auteur
 Thibaut, Falou et Salima
