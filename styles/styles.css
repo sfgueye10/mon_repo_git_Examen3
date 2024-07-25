@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/MyCustomFont.woff2') format('woff2'),
+         url('fonts/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
     --couleur-primaire: #4CAF50;
     --couleur-survol: #45a049;
@@ -13,13 +22,25 @@ html {
 
 /* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', 'MyCustomFont', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.logo img {
+    max-width: 120px; /* Ajustez la taille en fonction de vos besoins */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
 
 header {
     background-color: #333;
@@ -48,12 +69,12 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
 }
 
 footer {
-    background-color: #f8f8f8;
+    background-color: #333;
+    color: white;
     padding: 10px;
     text-align: center;
     width: 100%;
