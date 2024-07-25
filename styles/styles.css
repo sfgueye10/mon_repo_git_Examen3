@@ -1,0 +1,367 @@
+:root {
+    --couleur-primaire: #4CAF50;
+    --couleur-survol: #45a049;
+    --couleur-fond: #f9f9f9;
+    --couleur-texte: white;
+    --ombre-boite: 0 0 10px rgba(0,0,0,0.1);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles de l'introduction */
+.introduction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.introduction h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Styles du carrousel */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 20s infinite;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 60%;
+    height: 70%;
+}
+
+.carousel-item p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+
+/* Styles de l'animation */
+.animation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.animation {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+    animation: rotateText 3s infinite linear;
+}
+
+#rectangle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-primaire);
+    animation: moveRectangle 2s infinite;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-survol);
+    border-radius: 50%;
+    animation: moveCircle 2s infinite;
+}
+
+#rotating-square {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-secondaire);
+    animation: rotateSquare 3s infinite linear;
+    margin-top: 20px;
+}
+
+#color-changing-circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-tertiaire);
+    border-radius: 50%;
+    animation: changeColor 4s infinite;
+    margin-top: 20px;
+}
+
+#pulsing-element {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-primaire);
+    animation: pulse 2s infinite;
+    margin-top: 20px;
+}
+
+#scaling-element {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-secondaire);
+    animation: scaleElement 3s infinite;
+    margin-top: 20px;
+}
+
+#fading-element {
+    width: 100px;
+    height: 100px;
+    background-color: var(--couleur-tertiaire);
+    animation: fadeElement 3s infinite;
+    margin-top: 20px;
+}
+
+/* Styles de l'animation de deplacement du telephone */
+#car {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: driveCar 5s infinite linear;
+}
+
+#car img {
+    width: 100px;
+    height: auto;
+}
+
+@keyframes driveCar {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+
+@keyframes moveRectangle {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(200px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes moveCircle {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(200px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rotateSquare {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes changeColor {
+    0% { background-color: var(--couleur-tertiaire); }
+    50% { background-color: var(--couleur-secondaire); }
+    100% { background-color: var(--couleur-tertiaire); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes scaleElement {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeElement {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes rotateText {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.informations-supplementaires {
+    background-color: var(--couleur-fond);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.informations-supplementaires p {
+    margin: 10px 0;
+}
+.inscription-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--ombre-boite);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.inscription-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.inscription-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.inscription-form button {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-texte);
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.inscription-form button:hover {
+    background-color: var(--couleur-survol);
+}
+
+/* Styles du formulaire de contact */
+.contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--ombre-boite);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-texte);
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: var(--couleur-survol);
+}
+
+/* Styles des informations supplémentaires */
+.additional-info {
+    margin-top: 20px;
+    text-align: center;
+}
