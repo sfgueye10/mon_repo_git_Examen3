@@ -1,3 +1,4 @@
+
 Mon Site Web
 Description
 Ce projet est un site web de vente de téléphones mobiles. Il comprend plusieurs pages, dont une page d’accueil, une page d’inscription, une page de contact et une page d’animation. Chaque page est conçue pour offrir une expérience utilisateur fluide et agréable.
