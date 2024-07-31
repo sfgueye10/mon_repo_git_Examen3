@@ -6,6 +6,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="../scripts/include.js" defer></script>
+    <script src="../scripts/validation.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,14 +14,18 @@
         <div data-include="../pages/navigation.html"></div>
     </header>
     <main>
-        <form class="contact-form" action="#" method="post">
+        <form id="contact-form" class="contact-form" action="#" method="post">
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" aria-label="Nom" required>
+            <span id="nom-error" class="error-message"></span>
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" aria-label="Email" required>
+            <span id="email-error" class="error-message"></span>
             <label for="message">Message :</label>
             <textarea id="message" name="message" aria-label="Message" required></textarea>
+            <span id="message-error" class="error-message"></span>
             <button type="submit" aria-label="Envoyer">Envoyer</button>
+            <div id="form-message" class="form-message"></div>
         </form>
         <div class="additional-info">
             <p>Adresse : 123 Rue Radisson, Gatineau, Canada</p>

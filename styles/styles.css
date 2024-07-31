@@ -20,14 +20,11 @@ html {
     min-height: 100%;
 }
 
-/* Styles généraux */
+/* Styles par défaut pour les grands écrans */
 body {
-    font-family: 'Roboto', 'MyCustomFont', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 .carousel-item img {
@@ -39,6 +36,37 @@ body {
 .logo img {
     max-width: 120px; /* Ajustez la taille en fonction de vos besoins */
     height: auto; /* Conserve les proportions de l'image */
+}
+header, main, footer {
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    /* Styles pour les tablettes et les petits écrans */
+    header, main, footer {
+        padding: 0.5em;
+    }
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles pour les téléphones mobiles */
+    body {
+        font-size: 14px;
+    }
+    .logo img {
+        width: 100px;
+    }
 }
 
 
@@ -65,6 +93,27 @@ nav ul li a {
     text-decoration: none;
 }
 
+section {
+    margin-bottom: 20px;
+}
+
+
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #007B9A;
+}
+
 main {
     flex: 1;
     display: flex;
@@ -79,6 +128,8 @@ footer {
     text-align: center;
     width: 100%;
 }
+
+
 
 /* Styles de l'introduction */
 .introduction {
@@ -141,148 +192,6 @@ footer {
 
 
 /* Styles de l'animation */
-.animation-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.animation {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: blue;
-    animation: rotateText 3s infinite linear;
-}
-
-#rectangle {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-primaire);
-    animation: moveRectangle 2s infinite;
-}
-
-#circle {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-survol);
-    border-radius: 50%;
-    animation: moveCircle 2s infinite;
-}
-
-#rotating-square {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-secondaire);
-    animation: rotateSquare 3s infinite linear;
-    margin-top: 20px;
-}
-
-#color-changing-circle {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-tertiaire);
-    border-radius: 50%;
-    animation: changeColor 4s infinite;
-    margin-top: 20px;
-}
-
-#pulsing-element {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-primaire);
-    animation: pulse 2s infinite;
-    margin-top: 20px;
-}
-
-#scaling-element {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-secondaire);
-    animation: scaleElement 3s infinite;
-    margin-top: 20px;
-}
-
-#fading-element {
-    width: 100px;
-    height: 100px;
-    background-color: var(--couleur-tertiaire);
-    animation: fadeElement 3s infinite;
-    margin-top: 20px;
-}
-
-/* Styles de l'animation de deplacement du telephone */
-#car {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: driveCar 5s infinite linear;
-}
-
-#car img {
-    width: 100px;
-    height: auto;
-}
-
-@keyframes driveCar {
-    0% {
-        left: -100px;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-
-
-@keyframes moveRectangle {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(200px); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes moveCircle {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(200px); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes rotateSquare {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes changeColor {
-    0% { background-color: var(--couleur-tertiaire); }
-    50% { background-color: var(--couleur-secondaire); }
-    100% { background-color: var(--couleur-tertiaire); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
-
-@keyframes scaleElement {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
-
-@keyframes fadeElement {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes rotateText {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 
 .informations-supplementaires {
     background-color: var(--couleur-fond);
@@ -385,4 +294,66 @@ footer {
 .additional-info {
     margin-top: 20px;
     text-align: center;
+}
+
+.color-change {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.color-change:hover {
+    background-color: #e74c3c;
+}
+
+.form-feedback {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.form-feedback p {
+    margin: 0;
+    padding: 5px;
+}
+
+.form-feedback p {
+    color: red; /* Messages d'erreur en rouge */
+}
+
+.form-feedback.success {
+    color: green; /* Message de succès en vert */
+}
+
+
+.rotate-box {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.rotate-box:hover {
+    transform: rotate(45deg);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}
+
+#form-message {
+    color: green;
+    font-size: 1em;
+    margin-top: 10px;
 }

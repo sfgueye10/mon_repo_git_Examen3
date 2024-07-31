@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation</title>
+    <title>Animations</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="../scripts/include.js" defer></script>
+    <script src="../scripts/animations.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>ANIMATION</h1>
-        <div data-include="../pages/navigation.html"></div>
+        <h1>ANIMATIONS</h1>
+        <nav data-include="../pages/navigation.html"></nav>
     </header>
     <main>
-        <div class="animation-container">
-            <div class="animation">Animation </div>
-            <div id="rectangle"></div>
-            <div id="circle"></div>
-            <div id="rotating-square"></div>
-            <div id="color-changing-circle"></div>
-            <div id="pulsing-element"></div>
-            <div id="scaling-element"></div>
-            <div id="fading-element"></div>
-            <div id="car">
-                <img src="../images/mobil.svg" alt="mobil">
-            </div>
-        </div>
+        <section>
+            <h2>Contrôle du paragraphe</h2>
+            <button id="toggle-paragraph" type="button">Afficher/Cacher le paragraphe</button>
+            <p id="dynamic-paragraph" style="display:none;">Ceci est un paragraphe dynamique.</p>
+        </section>
+        <section>
+            <h2>Gestion des images</h2>
+            <div id="image-container"></div>
+            <!-- Formulaire pour ajouter une image depuis un fichier -->
+            <form id="image-form" enctype="multipart/form-data" >
+                <label for="image-file">Choisissez une image :</label>
+                <input type="file" id="image-file" accept="image/*" >
+                <button type="submit">Ajouter l'image</button>
+            </form>
+        </section>
+        <section>
+            <h2>Gestion des paragraphes</h2>
+            <div id="paragraph-container"></div>
+            <!-- Formulaire pour ajouter un paragraphe -->
+            <form id="paragraph-form">
+                <label for="paragraph-text">Texte du paragraphe :</label>
+                <input type="text" id="paragraph-text" placeholder="Entrez le texte du paragraphe">
+                <button type="submit">Ajouter le paragraphe</button>
+            </form>
+            <button id="remove-paragraph" type="button">Supprimer le paragraphe</button>
+            <p id="paragraph-to-remove">Ceci est un paragraphe à supprimer.</p>
+        </section>
+        <section>
+            <h2>Effets interactifs</h2>
+            <div class="color-change">Survolez-moi pour changer ma couleur!</div>
+            <button id="show-text" type="button">Afficher le texte</button>
+            <p id="hidden-text" style="display:none;">Ceci est un texte caché qui s'affiche au clic!</p>
+            <div class="rotate-box">Survolez-moi pour voir l'effet!</div>
+        </section>
     </main>
     <footer>
         <div data-include="../pages/footer.html"></div>

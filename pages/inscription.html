@@ -6,6 +6,7 @@
     <title>Inscription</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="../scripts/include.js" defer></script>
+    <script src="../scripts/validation.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,35 +14,45 @@
         <div data-include="../pages/navigation.html"></div>
     </header>
     <main>
-        <form class="inscription-form" action="#" method="post">
+        <form id="registration-form" class="inscription-form" action="#" method="post">
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" aria-label="Nom" required>
+            <span id="nom-error" class="error-message"></span>
 
             <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="prenom" aria-label="Prénom" required>
+            <span id="prenom-error" class="error-message"></span>
 
             <label for="date">Date de naissance :</label>
             <input type="date" id="date" name="date" aria-label="Date de naissance" required>
+            <span id="date-error" class="error-message"></span>
 
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" aria-label="Email" required>
+            <span id="email-error" class="error-message"></span>
 
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" aria-label="Mot de passe" required>
+            <span id="password-error" class="error-message"></span>
 
             <label for="confirm_password">Confirmer le mot de passe :</label>
             <input type="password" id="confirm_password" name="confirm_password" aria-label="Confirmer le mot de passe" required>
+            <span id="confirm-password-error" class="error-message"></span>
 
             <label for="adresse">Adresse :</label>
             <input type="text" id="adresse" name="adresse" aria-label="Adresse" required>
+            <span id="adresse-error" class="error-message"></span>
 
             <label for="ville">Ville :</label>
             <input type="text" id="ville" name="ville" aria-label="Ville" required>
+            <span id="ville-error" class="error-message"></span>
 
             <label for="code_postal">Code Postal :</label>
-            <input type="number" id="code_postal" name="code_postal" aria-label="Code Postal" required>
+            <input type="text" id="code_postal" name="code_postal" aria-label="Code Postal" required>
+            <span id="code_postal-error" class="error-message"></span>
 
             <button type="submit" aria-label="S'inscrire">S'inscrire</button>
+            <p id="form-message"></p>
         </form>
     </main>
     <footer>
